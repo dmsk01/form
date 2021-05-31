@@ -245,18 +245,57 @@ body._lock {
   border: 1px solid #e23232;
 }
 
-input:focus + label {
-  font-size: 12px;
-  -webkit-transform: translate(30px, -250%);
-  -ms-transform: translate(30px, -250%);
-  transform: translate(30px, -250%);
-}
+@supports not (-ms-ime-align: auto) {
+  label {
+    font-size: 12px;
+    -webkit-transform: translate(30px, -250%);
+    -ms-transform: translate(30px, -250%);
+    transform: translate(30px, -250%);
+  }
 
-textarea:focus + label {
-  font-size: 12px;
-  -webkit-transform: translate(30px, -250%);
-  -ms-transform: translate(30px, -250%);
-  transform: translate(30px, -250%);
+  input:not(:-moz-placeholder-shown) + label {
+    font-size: 12px;
+    -webkit-transform: translate(30px, -250%);
+    -ms-transform: translate(30px, -250%);
+    transform: translate(30px, -250%);
+  }
+
+  input:not(:-ms-input-placeholder) + label {
+    font-size: 12px;
+    -webkit-transform: translate(30px, -250%);
+    -ms-transform: translate(30px, -250%);
+    transform: translate(30px, -250%);
+  }
+
+  input:focus + label,
+  input:not(:placeholder-shown) + label {
+    font-size: 12px;
+    -webkit-transform: translate(30px, -250%);
+    -ms-transform: translate(30px, -250%);
+    transform: translate(30px, -250%);
+  }
+
+  textarea:not(:-moz-placeholder-shown) + label {
+    font-size: 12px;
+    -webkit-transform: translate(30px, -250%);
+    -ms-transform: translate(30px, -250%);
+    transform: translate(30px, -250%);
+  }
+
+  textarea:not(:-ms-input-placeholder) + label {
+    font-size: 12px;
+    -webkit-transform: translate(30px, -250%);
+    -ms-transform: translate(30px, -250%);
+    transform: translate(30px, -250%);
+  }
+
+  textarea:focus + label,
+  textarea:not(:placeholder-shown) + label {
+    font-size: 12px;
+    -webkit-transform: translate(30px, -250%);
+    -ms-transform: translate(30px, -250%);
+    transform: translate(30px, -250%);
+  }
 }
 
 .form__contacts {
