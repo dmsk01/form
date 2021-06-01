@@ -1,1 +1,101 @@
-<!DOCTYPE html><html lang="ru"><head>  <title>Главная</title>  <meta charset="UTF-8">  <meta name="format-detection" content="telephone=no">  <link rel="stylesheet" href="css/style.min.css">  <link rel="shortcut icon" href="favicon.ico">  <link rel="preconnect" href="https://fonts.gstatic.com">  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">  <link rel="preconnect" href="https://fonts.gstatic.com">  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">  <!-- <meta name="robots" content="noindex, nofollow"> -->  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->  <meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body>  <div class="wrapper">    <main class="page">      <div class="page__wrapper">        <form action="#" class="form">          <h2 class="form__title">Ваша заявка</h2>          <div class="form__line">            <input placeholder=" " tabindex="1" autocomplete="off" type="text" name="fullname" id="fullname" data-error="Обязательное поле" class="form__input input _req" />            <label for="fullname" class="form__label">Фамилия, имя и отчество *</label>          </div>          <div class="form__line">            <input placeholder=" " tabindex="2" autocomplete="off" type="text" name="position" id="position" data-error="Обязательное поле" class="form__input input _req" />            <label for="position" class="form__label">Должность *</label>          </div>          <div class="form__line">            <input placeholder=" " tabindex="3" autocomplete="off" type="text" name="organization" id="organization" data-error="Обязательное поле" class="form__input input _req" />            <label for="organization" class="form__label">Организация *</label>          </div>          <div class="form__line">            <label for="prevExp" class="form__label select__label">Регион *</label>            <select tabindex="4" name="region" class="form" data-error="Обязательное поле">              <option value="1">Московская область</option>              <option value="2">Москва</option>              <option value="3">Ленинградская область</option>              <option value="4">Санкт-Петербург</option>            </select>          </div>          <div class="form__line">            <input placeholder=" " tabindex="5" autocomplete="off" type="text" name="address" id="address" data-error="Обязательное поле" class="form__input input _req" />            <label for="address" class="form__label">Адрес *</label>          </div>          <div class="form__contacts">            <div class="form__contact">              <div class="form__line">                <input placeholder=" " tabindex="6" data-value='' autocomplete="off" type="tel" name="tel" id="tel" data-error="Обязательное поле" class="form__input input _req _phone" />                <label for="tel" class="form__label">Контактный телефон *</label>              </div>            </div>            <div class="form__contact">              <div class="form__line">                <input placeholder=" " tabindex="7" autocomplete="off" type="email" name="email" id="email" data-error="Обязательное поле" class="form__input input _req _email" />                <label for="email" class="form__label">Электронная почта *</label>              </div>            </div>          </div>          <div class="form__line">            <input placeholder=" " tabindex="8" autocomplete="off" type="text" name="web" id="web" class="form__input input" />            <label for="web" class="form__label">WEB</label>          </div>          <div class="form__line">            <label for="prevExp" class="form__label select__label">Пользовались ли Вы услугами нашей лаборатории? *</label>            <select tabindex="9" name="prevExp" class="form" data-error="Обязательное поле">              <option value="1">Да</option>              <option value="2">Нет</option>            </select>          </div>          <div class="form__line">            <textarea placeholder=" " tabindex="10" id="comment" name="comment" class="form__textarea"></textarea>            <label for="comment" class="form__label form__label_textarea">Комментарий</label>          </div>          <div class="form__agreement">            <label class="checkbox">              <input tabindex="11" data-error="Обязательное поле" class="checkbox__input _req input" type="checkbox" name="agreement">              <span class="checkbox__text"><span>С условиями <a href="https://yandex.ru/" target="_blank">(договор на диагностику картофеля, договор на диагностику овощных культур, договор на химический анализ)</a> ознакомлен и согласен</span></span>            </label>          </div>          <div class="form__bottom">            <div class="form__total">              <p>Общая сумма заказа:</p>              <span>13 800 P</span>            </div>            <div class="form__button">              <button tabindex="12" type="submit" class="form__btn btn">Отправить</button>            </div>          </div>        </form>      </div>    </main>  </div>  <script src="js/vendors.min.js"></script><script src="js/app.min.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Главная</title>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <!-- <meta name="robots" content="noindex, nofollow"> -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <div class="page__wrapper">
+        <form action="#" class="form">
+          <h2 class="form__title">Ваша заявка</h2>
+          <div class="form__line">
+            <input placeholder=" " tabindex="1" autocomplete="off" type="text" name="fullname" id="fullname" data-error="Обязательное поле" class="form__input input _req" />
+            <label for="fullname" class="form__label">Фамилия, имя и отчество *</label>
+          </div>
+          <div class="form__line">
+            <input placeholder=" " tabindex="2" autocomplete="off" type="text" name="position" id="position" data-error="Обязательное поле" class="form__input input _req" />
+            <label for="position" class="form__label">Должность *</label>
+          </div>
+          <div class="form__line">
+            <input placeholder=" " tabindex="3" autocomplete="off" type="text" name="organization" id="organization" data-error="Обязательное поле" class="form__input input _req" />
+            <label for="organization" class="form__label">Организация *</label>
+          </div>
+          <div class="form__line">
+            <label for="prevExp" class="form__label select__label">Регион *</label>
+            <select tabindex="4" name="region" class="form" data-error="Обязательное поле">
+              <option value="1">Московская область</option>
+              <option value="2">Москва</option>
+              <option value="3">Ленинградская область</option>
+              <option value="4">Санкт-Петербург</option>
+            </select>
+          </div>
+          <div class="form__line">
+            <input placeholder=" " tabindex="5" autocomplete="off" type="text" name="address" id="address" data-error="Обязательное поле" class="form__input input _req" />
+            <label for="address" class="form__label">Адрес *</label>
+          </div>
+          <div class="form__contacts">
+            <div class="form__contact">
+              <div class="form__line">
+                <input placeholder=" " tabindex="6" data-value='' autocomplete="off" type="tel" name="tel" id="tel" data-error="Обязательное поле" class="form__input input _req _phone" />
+                <label for="tel" class="form__label">Контактный телефон *</label>
+              </div>
+            </div>
+            <div class="form__contact">
+              <div class="form__line">
+                <input placeholder=" " tabindex="7" autocomplete="off" type="email" name="email" id="email" data-error="Обязательное поле" class="form__input input _req _email" />
+                <label for="email" class="form__label">Электронная почта *</label>
+              </div>
+            </div>
+          </div>
+          <div class="form__line">
+            <input placeholder=" " tabindex="8" autocomplete="off" type="text" name="web" id="web" class="form__input input" />
+            <label for="web" class="form__label">WEB</label>
+          </div>
+          <div class="form__line">
+            <label for="prevExp" class="form__label select__label">Пользовались ли Вы услугами нашей лаборатории? *</label>
+            <select tabindex="9" name="prevExp" class="form" data-error="Обязательное поле">
+              <option value="1">Да</option>
+              <option value="2">Нет</option>
+            </select>
+          </div>
+          <div class="form__line">
+            <textarea placeholder=" " tabindex="10" id="comment" name="comment" class="form__textarea"></textarea>
+            <label for="comment" class="form__label form__label_textarea">Комментарий</label>
+          </div>
+          <div class="form__agreement">
+            <label class="checkbox">
+              <input tabindex="11" data-error="Обязательное поле" class="checkbox__input _req input" type="checkbox" name="agreement">
+              <span class="checkbox__text"><span>С условиями <a href="https://yandex.ru/" target="_blank">(договор на диагностику картофеля, договор на диагностику овощных культур, договор на химический анализ)</a> ознакомлен и согласен</span></span>
+            </label>
+          </div>
+          <div class="form__bottom">
+            <div class="form__total">
+              <p>Общая сумма заказа:</p>
+              <span>13 800 P</span>
+            </div>
+            <div class="form__button">
+              <button tabindex="12" type="submit" class="form__btn btn">Отправить</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+  <script src="js/vendors.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+
+</html>
